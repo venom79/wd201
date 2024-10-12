@@ -51,4 +51,12 @@ const tomorrow = formattedDate(
   new Date(new Date().setDate(dateToday.getDate() + 1)),
 );
 
+const todos = todoList();
+const list = [
+  { title: "Task 1", completed: true, dueDate: today },
+  { title: "Task 2", completed: false, dueDate: tomorrow },
+  { title: "Task 3", completed: false, dueDate: yesterday },
+];
+console.log(todos.toDisplayableList(list));
+
 module.exports = todoList;
