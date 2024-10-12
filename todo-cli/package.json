@@ -5,6 +5,14 @@
   "scripts": {
     "test": "jest"
   },
+  "lint-staged": {
+    "*.js": "eslint --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "author": "aditya",
   "license": "ISC",
   "description": "",
